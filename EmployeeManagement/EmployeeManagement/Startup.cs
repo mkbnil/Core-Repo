@@ -34,7 +34,7 @@ namespace EmployeeManagement
             }
 
             
-            app.UseRouting();
+            //app.UseRouting();
 
             //app.UseDefaultFiles();
             //app.UseStaticFiles();
@@ -45,13 +45,13 @@ namespace EmployeeManagement
             app.UseFileServer(fileServerOptions);
 
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync(_config["MyKey"]);
-                });
-            });
+            //app.UseEndpoints(endpoints =>
+            //{
+            //    endpoints.MapGet("/", async context =>
+            //    {
+            //        await context.Response.WriteAsync(_config["MyKey"]);
+            //    });
+            //});
         }
     }
 }
